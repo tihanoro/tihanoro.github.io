@@ -134,5 +134,5 @@ function draw_init(){
 
 //乱数を返す関数
 function getRandomInt(max) {
-    return Math.floor(Math.random() * Math.floor(max));
+    return Math.floor(Math.random() * Math.floor(max+1));
 }
