@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>2Dイジングモデルのシミュレーション</title>
+        <script type="text/javascript" src="./reversi.js" charset="utf-8"></script>
+    </head>
+    <body>
+        <h1>2Dイジングモデルのシミュレーション</h1>
+        <canvas id="canvas"></canvas>
+        <br>
+        <form name="Cell" >
+            <input type="radio" name="color" value="black" id="v1" checked="checked"/>
+            <label for="v1">黒</label>
+            <input type="radio" name="color" value="white" id="v2" />
+            <label for="v2">白</label><br>			
+        </form>
+        <form>
+            <input type="radio" name="J" value=1 id="ferro"checked="checked"/>
+            <label for="ferro">強磁性</label>
+            <input type="radio" name="J" value=-1 id="antiferro"/>
+            <label for="antiferro">反強磁性</label><br>			
+        </form>
+        kt:<span id="kt_value"></span><br>
+        <input type="range" name="kt" value=1.0 min=0.01 max=10 step=0.01 id="kt">
+		<input type="button" name="random" value="ランダム配値" onclick="spin_random();">
+		<input type="button" name="white" value="白配値" onclick="spin_white();">
+		<input type="button" name="black" value="黒配値" onclick="spin_black();">
+        <input type="button" name="kougo" value="交互に配値" onclick="spin_kougo();">
+		<input type="button" name="main" value="main" onclick="main();">
+		<input type="button" name="stop" value="stop" onclick="stop();">
+        <input type="button" name="printBoard" value="printBoard" onclick="printBoard();">
+        <input type="button" name="clear" value="クリア" onclick="remove();">
+		<script type="text/javascript">initBoard();kt_view();j_load();</script>
+    </body>
+</html>
